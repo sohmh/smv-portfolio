@@ -107,8 +107,8 @@ export const PROJECTS = [
   },
   {
     id: "prod3",
-    title: "Validating the Venturi Ground Tunnel Effect",
-    description: "A physical model and a simulation to validate the physics behind ground tunnel effect.",
+    title: "Validating the Venturi Ground Effect",
+    description: "A physical model and a simulation to validate the physics behind ground effect.",
     skill: ["Fluid Mechanics", "SimScale", "Low Fidelity Prototyping"],
     status: "Built",
     github: "https://github.com/sohmh/Ground-Effect-Validation",
