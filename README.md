@@ -1,6 +1,16 @@
 # SMV Portfolio
 
 Personal portfolio website built with React and Vite.
+When editing : 
+>edit code
+>save Ctrl+S
+>test locally : npm run dev
+>check changes : git status
+>build project : npm run build
+>stage changes : git add .
+>commit changes : git commit -m "message"
+>push changes : git push
+>Github Actions automatically deploys it
 
 ## Requirements
 
