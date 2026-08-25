@@ -269,28 +269,58 @@ function BlogPage() {
   );
 }
 
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xeajyggw';
+
 function ContactPage() {
+  const [formStatus, setFormStatus] = useState('idle');
+
+  const submitMessage = async (event) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    setFormStatus('sending');
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' },
+      });
+
+      if (!response.ok) throw new Error('Message delivery failed');
+      form.reset();
+      setFormStatus('success');
+    } catch {
+      setFormStatus('error');
+    }
+  };
+
   return (
     <>
       <Panel title="SEND A MESSAGE">
+        <form onSubmit={submitMessage}>
+          <input className="form-honeypot" type="text" name="_gotcha" tabIndex="-1" autoComplete="off" aria-hidden="true" />
         <div className="field">
           <label>NAME</label>
-          <input type="text" placeholder="Your name" />
+          <input name="name" type="text" placeholder="Your name" required />
         </div>
         <div className="field">
           <label>EMAIL</label>
-          <input type="email" placeholder="you@example.com" />
+          <input name="email" type="email" placeholder="you@example.com" required />
         </div>
         <div className="field">
           <label>MESSAGE</label>
-          <textarea placeholder="What's on your mind?" />
+          <textarea name="message" placeholder="What's on your mind?" required />
         </div>
         <button
           className="send-btn"
-          onClick={() => alert('Connect this form to EmailJS, Formspree, or any email service.')}
+          type="submit"
+          disabled={formStatus === 'sending'}
         >
           SEND ▶
         </button>
+        {formStatus === 'success' && <div className="form-status form-status--success" role="status">Message sent. Thank you!</div>}
+        {formStatus === 'error' && <div className="form-status form-status--error" role="alert">Could not send the message. Please try again.</div>}
+        </form>
       </Panel>
 
       <Panel title="CONTACT INFO">

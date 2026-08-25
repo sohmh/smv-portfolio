@@ -145,7 +145,7 @@ function ProfilePanel() {
           <div className="profile-details">
             <h1>
               {PROFILE.name}
-              <span className="status-badge">ONLINE</span>
+              <span className="status-badge">∄</span>
             </h1>
             <div className="quote">&ldquo;{PROFILE.quote}&rdquo;</div>
             <div className="kv">
