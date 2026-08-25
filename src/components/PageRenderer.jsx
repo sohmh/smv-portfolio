@@ -9,7 +9,7 @@ import GitHubActivity from './GitHubActivity.jsx';
 import LeetCodeHeatmap from './LeetCodeHeatmap.jsx';
 
 import {
-  ABOUT, BLOG_POSTS, BLOG_CATEGORIES,
+  ABOUT, BLOG_POSTS,
   PROJECTS, UPDATES,
   VIDEOS, FEATURED_VIDEO,
   CREDENTIALS, CERTIFICATES,
@@ -33,15 +33,6 @@ function TagList({ tags }) {
   return (
     <div className="taglist">
       {unique.map(t => <span key={t}>{t}</span>)}
-    </div>
-  );
-}
-
-function ListItem({ label, right }) {
-  return (
-    <div className="list-item">
-      <span>{label}</span>
-      <span className="r">{right}</span>
     </div>
   );
 }
@@ -254,18 +245,11 @@ function ProjectsPage() {
 
 function BlogPage() {
   return (
-    <>
-      <Panel title="BLOG POSTS">
-        {BLOG_POSTS.map(post => (
-          <BlogEntry key={post.id} post={post} />
-        ))}
-      </Panel>
-      <Panel title="CATEGORIES">
-        {BLOG_CATEGORIES.map(({ name, count }) => (
-          <ListItem key={name} label={name} right={count} />
-        ))}
-      </Panel>
-    </>
+    <Panel title="BLOG POSTS">
+      {BLOG_POSTS.map(post => (
+        <BlogEntry key={post.id} post={post} />
+      ))}
+    </Panel>
   );
 }
 

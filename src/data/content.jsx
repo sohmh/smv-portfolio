@@ -111,8 +111,8 @@ export const PROJECTS = [
     description: "A physical model and a simulation to validate the physics behind ground tunnel effect.",
     skill: ["Fluid Mechanics", "SimScale", "Low Fidelity Prototyping"],
     status: "Built",
-    github: " ",
-    link: " ",
+    github: "https://github.com/sohmh/Ground-Effect-Validation",
+    link: "https://www.simscale.com/workbench/?pid=9158551518953901302&mi=spec:ac66c3bf-a493-4bbe-805b-84b2d42f7581%2Cservice:SIMULATION%2Cstrategy:7",
     details: "Made this project as I went deeper into the motorsports rabbit hole. Specifically how ground effect basically turns a car's underbody into a giant Venturi that sucks it onto the track.I wanted to see that pressure drop happen in real life, not just stare at diagrams. So I modeled a tiny ground tunnel in TinkerCad, exported the STL, and then rebuilt the same shape with cardboard and masking tape along with my teammate because sometimes you've gotta go analog (I could not have built the rig without him). I then imported the STL into SimScale, slapped on inlet/outlet boundary conditions, meshed it up, and ran the CFD sim. Meanwhile, the cardboard version got a fan taped to one end and a hole cut along the throat where the tunnel tightens. Stuck a tissue over it. Turned the fan on. The tissue immediately got pulled into the tunnel, no ambiguity, just a piece of paper getting vacuumed inward by the pressure differential on either side. Same physics showed up in the simulation streamlines and in my janky cardboard setup. Kind of wild that a principle keeping F1 cars planted at 300 km/h also works with masking tape and a CPU fan. ", // ← paste your extended write-up here
   },
   {
