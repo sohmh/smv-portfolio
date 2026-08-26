@@ -38,7 +38,7 @@ export const PROFILE = {
 //  STATS  (shown on the right of the profile row)
 // =============================================================================
 export const STATS = [
-  { label: "Projects Shipped", value: 5 },
+  { label: "Projects Shipped", value: 6 },
   { label: "Hackathons", value: 4 },
   { label: "Blog Posts", value: 3 },
   { label: "Research Papers", value: 0},
@@ -127,6 +127,17 @@ export const PROJECTS = [
   },
   {
     id: "prod5",
+    title: "Doppler Speed Detector",
+    description: "A Radar inspired speed detector using the Doppler Theory",
+    tech: ["Arduino UNO", "RCWL-0516", "Fritzing"],
+    status: "Built",
+    github: "https://github.com/ESMVEE/Doppler-Speed-Detector",
+    link: "",
+    details: "Built a radar inspired speed detector from scratch using an RCWL-0516 microwave sensor and an Arduino UNO. The sensor emits a 3.18 GHz signal; when it bounces off a moving object, the Doppler shift creates a beat frequency that the Arduino samples, crunches through the Doppler formula, and displays live speed in km/h on a 16x2 LCD. This was my first real electronics project : breadboards, datasheets, soldering fumes, the whole deal. While leading the team I learned how to read analog signals, do frequency estimation , condition noisy sensor data, and actually make a physical thing respond to code I wrote. It was genuinely fun going from how does radar even work? to waving my hand in front of a sensor and watching numbers pop up on a screen. Total build cost was under ₹900, took about two days, and taught me more about signal processing and hardware-software integration than any tutorial ever could. ",
+  },
+
+  {
+    id: "prod6",
     title: "Physique Log",
     description: "A standalone mobile application that allows complete workout customization and daily progress tracking",
     tech: ["Android Studio"],
