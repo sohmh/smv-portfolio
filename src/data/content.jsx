@@ -260,6 +260,12 @@ export const VIDEOS = [
   },
   {
     id: "2",
+    title: "Validating the Ground Effect",
+    duration: "2:18",
+    youtubeId: "https://youtu.be/R6uJc3Jc2-Y",
+  },
+  {
+    id: "3",
     title: "LockChain : Escrow Based Secure Checkout System",
     duration: "6:42",
     youtubeId: "https://youtu.be/Hd92UBj7EZA",
