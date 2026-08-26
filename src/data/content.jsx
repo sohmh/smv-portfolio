@@ -132,7 +132,7 @@ export const PROJECTS = [
     tech: ["Arduino UNO", "RCWL-0516", "Fritzing"],
     status: "Built",
     github: "https://github.com/ESMVEE/Doppler-Speed-Detector",
-    link: "",
+    link: "https://youtu.be/YSIZyew5K6U",
     details: "Built a radar inspired speed detector from scratch using an RCWL-0516 microwave sensor and an Arduino UNO. The sensor emits a 3.18 GHz signal; when it bounces off a moving object, the Doppler shift creates a beat frequency that the Arduino samples, crunches through the Doppler formula, and displays live speed in km/h on a 16x2 LCD. This was my first real electronics project : breadboards, datasheets, soldering fumes, the whole deal. While leading the team I learned how to read analog signals, do frequency estimation , condition noisy sensor data, and actually make a physical thing respond to code I wrote. It was genuinely fun going from how does radar even work? to waving my hand in front of a sensor and watching numbers pop up on a screen. Total build cost was under ₹900, took about two days, and taught me more about signal processing and hardware-software integration than any tutorial ever could. ",
   },
 
@@ -280,6 +280,12 @@ export const VIDEOS = [
     title: "LockChain : Escrow Based Secure Checkout System",
     duration: "6:42",
     youtubeId: "https://youtu.be/Hd92UBj7EZA",
+  },
+  {
+    id: "4",
+    title: "Doppler Speed Detector",
+    duration: "1:21",
+    youtubeId: "https://youtu.be/YSIZyew5K6U",
   },
 ];
 
